@@ -21,4 +21,4 @@ data = {
 df = pd.DataFrame(data)
 
 # Save to CSV
-df.to_csv('data/credit_card_records.csv', index=False)
+df.to_csv('util/data/credit_card_records.csv', index=False)
