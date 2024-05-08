@@ -1,9 +1,9 @@
 import pandas as pd
 import joblib
-import scikit_learn
-from scikit_learn.model_selection import train_test_split
-from scikit_learn.linear_model import LogisticRegression
-from scikit_learn.preprocessing import LabelEncoder
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import LabelEncoder
 
 def load_data(filepath):
     return pd.read_csv(filepath)
@@ -43,7 +43,7 @@ def test_model(model, X_test, y_test):
 
 def main():
     # Load the data
-    data = load_data('data/credit_card_records.csv')
+    data = load_data('util/data/credit_card_records.csv')
 
     # Preprocess the data
     data = preprocess_data(data)
@@ -55,7 +55,7 @@ def main():
     model = train_model(X_train, y_train)
 
     # Save the model
-    save_model(model, 'models/model.pkl')
+    save_model(model, 'model.pkl')
 
     # Test the model
     score = test_model(model, X_test, y_test)
