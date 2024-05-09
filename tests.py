@@ -13,7 +13,7 @@ def test_model_score():
     assert 0.0 <= score <= 1.0
 
 
-def test_model_score():
+def test_model_score2():
     score = app.main()  # Assuming the main function returns the score
     assert isinstance(score, float)
     assert 0.0 <= score <= 1.0
@@ -27,3 +27,4 @@ def test_model_score():
 
     # Compare the latest score with the current score
     assert score >= latest_score
+
